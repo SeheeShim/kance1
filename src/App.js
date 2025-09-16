@@ -17,7 +17,7 @@ import './styles/fonts.scss';
 
 function App() {
   return (
-    <body>
+    
       <Router>
         <Header />
           <main>
@@ -34,7 +34,7 @@ function App() {
   
         <Footer />
       </Router>
-    </body>
+    
   );
 }
 

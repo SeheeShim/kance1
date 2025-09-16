@@ -22,7 +22,7 @@ const Community = () => {
 
   return (
     <div className="challenge-section">
-      <h2 className="title">K-pop Dance Challenge</h2>
+      <h2 className="title">K-pop Dance Community</h2>
       <Swiper
         modules={[Autoplay]}
         spaceBetween={20}
