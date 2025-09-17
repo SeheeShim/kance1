@@ -1,5 +1,5 @@
 
-/* AIzaSyADI5Yy2C5jiUlKDmw7DjKThSbUhcRaac0 */
+
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
@@ -15,7 +15,7 @@ const Challenge = () => {
 
   useEffect(() => {
     const fetchVideos = async () => {
-      const API_KEY = "AIzaSyADI5Yy2C5jiUlKDmw7DjKThSbUhcRaac0"; // YouTube API 키 넣기
+      const API_KEY = ""; // YouTube API 키 넣기
 
       const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(
         "kpop Dance tuto Shorts"
