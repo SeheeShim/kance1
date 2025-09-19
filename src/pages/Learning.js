@@ -11,13 +11,62 @@ const TUTORS = [
   {
     id: "lia",
     name: "리아 킴",
-    profile: "/img/tutors/lia.jpg",
-    studioPhotos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"],
+    profile: "/img/Tutor/Tutor1.jpg",
+
+    // --- 요약/소개 ---
+    summary: "1MILLION 공동창립·총괄 안무가, 스우파2 출연",
+    career: [
+      "댄스 시작: 2005",
+      "원밀리언 스튜디오 오픈: 2014–현재",
+      "국내/해외 워크숍 다수 진행"
+    ],
+    bio: ['K-POP 안무가/디렉터. 원밀리언 스튜디오 대표',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2007, title: "World Dance Competition 4DA NEXT LEVEL", result: "관객 우승" },
+      { year: 2008, title: "4DA NEXT LEVEL", result: "판정 우승 및 랭킹 준우승" }
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "Main Studio",
+      address: "서울특별시 성동구 뚝섬로13길 33",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
-      { title: "가시나", youtubeId: "E5ONTXHS2mM" },
-      { title: "보핍보핍", youtubeId: "Gd9nVNi2f30" },
-      { title: "사이렌", youtubeId: "6uJf2IT2Zh8" },
-      { title: "우아하게", youtubeId: "BmWo8iWm0AA" },
+      { title: "가시나", youtubeId: "2yepkSVeVsM" },
+      { title: "HIP", youtubeId: "US2B33WeIak" },
+      { title: "24시간이 모자라", youtubeId: "L65eFdY9RRI" },
+      { title: "딩가딩가", youtubeId: "X6Brmaf27Tg" },
+      { title: "사이렌", youtubeId: "MEQrAsB-2lY" },
+      { title: "우아하게", youtubeId: "cszZgUUwLjE" },
+      { title: "너무너무너무", youtubeId: "dpdwX9TVO8s" },
+      { title: "WANNABE", youtubeId: "Vp9I_m6znMM" },
+    ],
+    // --- 예약 시간표 ---
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 }
+    ],
+
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
+  },
+  // 나머지 9명은 같은 형식으로 추가 (임시 샘플)
+  { 
+    id: "leejung",
+    name: "리정",
+    profile: "/img/Tutor/Tutor2.jpg",
+    studioPhotos: ["/img/studio/leejung_1.jpg"],
+    choreos: [
+      { title: "치맛바람", youtubeId: "sZ1q4b9m9t8" },
     ],
     timetable: [
       { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
@@ -25,18 +74,120 @@ const TUTORS = [
       { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
       { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
       { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ],
+    ]
   },
-  // 나머지 9명은 같은 형식으로 추가 (임시 샘플)
-  { id: "leejung", name: "리정", profile: "/img/tutors/leejung.jpg", studioPhotos: ["/img/studio/leejung_1.jpg"], choreos: [{ title: "치맛바람", youtubeId: "sZ1q4b9m9t8" }], timetable: [] },
-  { id: "choi", name: "최영준", profile: "/img/tutors/choi.jpg", studioPhotos: ["/img/studio/choi_1.jpg"], choreos: [{ title: "Nxde", youtubeId: "fCO7f0SmrDc" }], timetable: [] },
-  { id: "bada", name: "이바다", profile: "/img/tutors/bada.jpg", studioPhotos: ["/img/studio/bada_1.jpg"], choreos: [{ title: "Vibe", youtubeId: "Nn_TG2pF8PM" }], timetable: [] },
-  { id: "sorah", name: "Sorah Yang", profile: "/img/tutors/sorah.jpg", studioPhotos: ["/img/studio/sorah_1.jpg"], choreos: [{ title: "Intentions", youtubeId: "3l6Sg7F_8D0" }], timetable: [] },
-  { id: "taryn", name: "Taryn Cheng", profile: "/img/tutors/taryn.jpg", studioPhotos: ["/img/studio/taryn_1.jpg"], choreos: [{ title: "Kill This Love", youtubeId: "2S24-y0Ij3Y" }], timetable: [] },
-  { id: "rino", name: "Rino Nakasone", profile: "/img/tutors/rino.jpg", studioPhotos: ["/img/studio/rino_1.jpg"], choreos: [{ title: "Genie", youtubeId: "6SwiSpudKWI" }], timetable: [] },
-  { id: "gabee", name: "가비", profile: "/img/tutors/gabee.jpg", studioPhotos: ["/img/studio/gabee_1.jpg"], choreos: [{ title: "Rollin'", youtubeId: "1dN3rP2qL6o" }], timetable: [] },
-  { id: "mina", name: "미나명", profile: "/img/tutors/mina.jpg", studioPhotos: ["/img/studio/mina_1.jpg"], choreos: [{ title: "Dance The Night", youtubeId: "OiC1rgCPmUQ" }], timetable: [] },
-  { id: "bailey", name: "Bailey", profile: "/img/tutors/bailey.jpg", studioPhotos: ["/img/studio/bailey_1.jpg"], choreos: [{ title: "Positions", youtubeId: "tcYodQoapMg" }], timetable: [] },
+  { 
+    id: "choi",
+    name: "최영준",
+    profile: "/img/Tutor/Tutor3.jpg",
+    studioPhotos: ["/img/studio/choi_1.jpg"],
+    choreos: [
+      { title: "Nxde", youtubeId: "fCO7f0SmrDc" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+    { 
+    id: "gabee",
+    name: "가비",
+    profile: "/img/Tutor/Tutor4.jpg",
+    studioPhotos: ["/img/studio/gabee_1.jpg"],
+    choreos: [
+      { title: "Rollin'", youtubeId: "1dN3rP2qL6o" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+  { 
+    id: "bailey",
+    name: "Bailey",
+    profile: "/img/Tutor/Tutor5.jpg",
+    studioPhotos: ["/img/studio/bailey_1.jpg"],
+    choreos: [
+      { title: "Positions", youtubeId: "tcYodQoapMg" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+  { 
+    id: "mina",
+    name: "미나명",
+    profile: "/img/Tutor/Tutor6.jpg",
+    studioPhotos: ["/img/studio/mina_1.jpg"],
+    choreos: [
+      { title: "Dance The Night", youtubeId: "OiC1rgCPmUQ" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+  { 
+    id: "bada",
+    name: "이바다",
+    profile: "/img/Tutor/Tutor7.jpg",
+    studioPhotos: ["/img/studio/bada_1.jpg"],
+    choreos: [
+      { title: "Vibe", youtubeId: "Nn_TG2pF8PM" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+  { 
+    id: "byj",
+    name: "배윤정",
+    profile: "/img/Tutor/Tutor8.jpg",
+    studioPhotos: ["/img/studio/byj.jpg"],
+    choreos: [
+      { title: "Positions", youtubeId: "" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
+  { 
+    id: "bgy",
+    name: "백구영",
+    profile: "/img/Tutor/Tutor9.jpg",
+    studioPhotos: ["/img/studio/bgy.jpg"],
+    choreos: [
+      { title: "Positions", youtubeId: "" },
+    ],
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
+      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
+    ]
+  },
 ];
 
 export default function Learning() {
@@ -123,11 +274,18 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
         <div className="portrait" style={{ backgroundImage: `url(${tutor.profile})` }} />
         <div className="bio">
           <h2>Tutor - {tutor.name}</h2>
-          <p className="muted">경력: 예시 텍스트 · 스튜디오 운영 · 수상 내역 등</p>
-
+          <p className="muted">{tutor.summary}</p>
+          <br></br>
+          <section className="about">
+          <h3>경력</h3>
+          <ul>{tutor.career.map((c,i)=><li key={i}>{c}</li>)}</ul>
+          
           {/* TV 프레임 + 오른쪽 안무 리스트 */}
           <div className="tv-row">
             <div className="tv">
+              <i className="ant ant-left"  aria-hidden="true" />
+              <i className="ant ant-right" aria-hidden="true" />
+              {/* <i className="ant-tab"      aria-hidden="true" /> */}
               {activeChoreo ? (
                 <iframe
                   title={activeChoreo.title}
@@ -155,6 +313,17 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
               })}
             </ul>
           </div>
+
+          <h3>수상 내역</h3>
+          <ul>{tutor.awards.map((a,i)=><li key={i}>
+            {a.year} · {a.title} {a.result && `– ${a.result}`}
+          </li>)}</ul>
+
+          {tutor.bio && (<>
+            <h3>소개</h3>
+            <p className="muted" style={{whiteSpace:"pre-line"}}>{tutor.bio}</p>
+          </>)}
+        </section>
 
           <div className="line" />
 

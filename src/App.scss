@@ -3,6 +3,7 @@
 
 *{
   font-family: 'Gugi', cursive;
+  list-style: none;
 }
 Header{
   position: fixed;
@@ -11,7 +12,7 @@ Header{
 main{
     /* padding: 4rem 2rem; */
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #333;
     color: $primary-color;
 }
