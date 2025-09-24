@@ -63,7 +63,10 @@ const TUTORS = [
       { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
       { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 }
     ],
-
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "2yepkSVeVsM"    
+    },
     // 필요 시 태그/장르 등
     tags: ["K-pop", "Urban", "Choreo"]
   },
@@ -273,7 +276,11 @@ function TutorList({ tutors, onOpen }) {
 }
 
 /* ---------- 2) 튜터 상세 + How to Dance ---------- */
-function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiveTab, onBook, onBack }) {
+function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiveTab, onBook, onBack , props}) {
+
+  const howtoBasicId = tutor?.howto?.basic || "0qisGSwZym4";
+  const howtoKpopId  = activeChoreo?.youtubeId || tutor?.howto?.kpop || "E5ONTXHS2mM";
+
   return (
     <section className="tutor-detail container">
       <button className="back" onClick={onBack}>← 목록으로</button>
@@ -361,7 +368,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
                   <div className="video-cover">
                     <iframe
                       title="기본기"
-                      src="https://www.youtube.com/embed/0qisGSwZym4"
+                      src={`https://www.youtube.com/embed/${howtoBasicId}`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
@@ -373,7 +380,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
                   <div className="video-cover">
                     <iframe
                       title="K-pop"
-                      src={`https://www.youtube.com/embed/${(activeChoreo && activeChoreo.youtubeId) || "E5ONTXHS2mM"}`}
+                      src={`https://www.youtube.com/embed/${howtoKpopId}`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
@@ -381,6 +388,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
                 </div>
               )}
             </div>
+
 
             <div className="cta-row">
               <button className="book" onClick={onBook}>예약하기</button>
@@ -422,7 +430,7 @@ function Booking({ tutor, onBack }) {
   const [date, setDate] = useState("");           // YYYY-MM-DD
   const [start, setStart] = useState("00:00");    // HH:mm
   const [end, setEnd]     = useState("23:59");    // HH:mm
-
+  
   // ---- 바깥 클릭 닫기 ----
   useEffect(() => {
     const onClick = (e) => {
