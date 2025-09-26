@@ -1,0 +1,491 @@
+/* ===== Theme ===== */
+$primary-color: #ff7423;
+$text-dark: #333333;
+$text-light: #ffffff;
+$background-color: #333333;
+
+:root { scroll-behavior: smooth; }
+.container { width: min(1100px, 92%); margin: 0 auto;}
+
+.learning {
+  background: $background-color;
+  color: $text-light;
+  min-height: 100vh;
+  padding-top: 4.375rem; /* 70px */
+}
+
+/* 공통 */
+.muted { color: rgba(255,255,255,.75); }
+.back {
+  background: transparent;
+  border: 0.0625rem solid rgba(255,255,255,.25); /* 1px */
+  color: #fff;
+  padding: 0.5rem 0.75rem; /* 8px 12px */
+  border-radius: 0.625rem; /* 10px */
+  margin: 1.125rem 0; /* 18px 0 */
+  cursor: pointer;
+}
+.line { height: 0.0625rem; background: rgba(255,255,255,.15); margin: 1rem 0 0.375rem; } /* 1px, 16px 0 6px */
+.to-top{
+  position: fixed; right: 1.125rem; bottom: 1.125rem; z-index: 20; /* 18px */
+  width: 2.5rem; height: 2.5rem; /* 40px */
+  border-radius: 50%;
+  background: rgba(0,0,0,.5); color:#fff; border: 0.0625rem solid rgba(255,255,255,.3); /* 1px */
+  backdrop-filter: blur(4px); cursor: pointer;
+}
+
+.tutor-list {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+  display: flow-root;
+
+  h1{
+    font-size: clamp(3.5rem, 3vw, 2.125rem);
+    margin: 0.625rem 0 6rem;
+    letter-spacing: 1px;
+  }
+
+  /* 더 큰 원과 적절한 간격 */
+  .grid{
+    display: grid;
+    column-gap: 12rem;   /* ⬅︎ 이미지 양옆 간격 */
+    row-gap: 5rem;     /* ⬅︎ 세로 간격 */
+    grid-template-columns: repeat(3, max-content);
+    list-style: none; padding-left: 0; margin-left: 0;
+    justify-content: center;
+    justify-items: center;
+
+    @media (max-width: 1100px){ gap: 2rem; }
+    @media (max-width: 920px){ grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 560px){ grid-template-columns: 1fr; column-gap: 0;/* 한 열일 땐 불필요 */ row-gap: 1.5rem;}
+  }
+
+  .tutor-card{
+    text-align: center; cursor: pointer; margin: 0;
+
+    /* ← 여기만 바꾸면 크기/채움감이 달라져 */
+    .avatar{
+      /* 데스크톱: 17.5rem(≈280px), 태블릿: 15rem, 모바일: 13rem */
+      width: 18rem;  height: 18rem;
+      margin: 0 auto 0.75rem;
+      border-radius: 50%;
+      /* 이미지를 더 꽉 채우기 위해 기본 zoom 업 */
+      background: #222 center / 112% no-repeat; /* 기존 cover → 112%로 살짝 확대 */
+      /* 외곽선은 조금 얇게 해서 사진이 더 커 보이게 */
+      border: none;
+      box-shadow:
+        0 0 0 0.3125rem rgba(255,255,255,.1),   /* ⬅ 바깥 테두리(약 5px) */
+        0 0.875rem 1.5rem rgba(0,0,0,.35);       /* 드롭 섀도 */
+      transition: transform .15s ease, box-shadow .15s ease, background-size .15s ease;
+
+      @media (max-width: 1100px){ width: 15rem; height: 15rem; }
+      @media (max-width: 560px){  width: 13rem; height: 13rem; }
+    }
+
+    /* 호버 시 살짝 더 꽉 차 보이게 */
+    &:hover .avatar{
+      transform: translateY(-0.25rem);
+      box-shadow:
+        0 0 0 0.3125rem rgba(255,255,255,.16),
+        0 0.625rem 1.5rem rgba(0,0,0,.5);
+      background-size: 116%;
+    }
+
+    .name{
+      display: block;
+      font-size: 1.3rem;
+      color: rgba(255,255,255,.9);
+      margin-bottom: 3rem; /* 이름 아래 여백 요청분 */
+    }
+  }
+}
+
+
+
+/* ---------- 2) 상세 ---------- */
+.tutor-detail {
+  padding: 0.625rem 0 3.125rem; /* 10px 0 50px */
+
+  .hero{
+    display: grid;
+    /* 사진 크기(14.5rem)에 맞춰 첫 컬럼 고정 + 가로 간격 넓힘 */
+    grid-template-columns: 15rem 1fr; /* 이전 220px 1fr */
+    column-gap: 3.5rem;  /* ← 여기! 이미지와 오른쪽 사이 여백 */
+    row-gap: 1rem;
+
+    @media (max-width: 1100px){
+      grid-template-columns: 13.5rem 1fr;
+      column-gap: 2rem;   /* 화면 줄어들면 살짝 축소 */
+    }
+    @media (max-width: 820px){
+      grid-template-columns: 1fr;  /* 모바일은 세로 스택 */
+      column-gap: 0;
+      row-gap: 1.25rem;
+    }
+  }
+
+  .portrait{
+    width: 15rem; height: 15rem; /* 220px */
+    border-radius: 50%;
+    background: #222 center / 112% no-repeat;
+    border: none;
+    box-shadow:
+      0 0 0 0.3125rem rgba(255,255,255,.16),  /* 바깥 테두리(약 5px) */
+      0 0.875rem 1.5rem rgba(0,0,0,.35);      /* 아래 그림자 */
+
+    @media (max-width: 1100px){ width: 13.5rem; height: 13.5rem; }
+    @media (max-width: 820px){  width: 12.5rem; height: 12.5rem; }
+  }
+   @media (hover:hover){
+    .portrait:hover{
+      background-size: 116%;
+      box-shadow:
+        0 0 0 0.3125rem rgba(255,255,255,.16),
+        0 0.625rem 1.5rem rgba(0,0,0,.5);
+    }
+  }
+
+  .bio{
+    h2{ margin: 0 0 0.8rem; font-size: clamp(2.5rem, 2.6vw, 1.75rem); }
+    h3{ margin: 2rem 0 0.5rem; font-size: 1.7rem;}
+    li{ margin-bottom: 0.7rem;}
+    .choreo-list{/* 안무 리스트 */
+      list-style:none; margin:0; padding:0;
+      li{
+        background: #fff; color: $text-dark;
+        padding: 0.625rem 0.75rem; /* 10px 12px */
+        border-radius: 0.625rem;   /* 10px */
+        margin-bottom: 0.5rem;   /* 10px */
+        cursor: pointer;
+        font-weight: 600;
+        border: 0.125rem solid transparent; /* 2px */
+        transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+        &:hover{ transform: translateY(-0.125rem); box-shadow: 0 0.625rem 1.5rem rgba(0,0,0,.3); } /* 2px, 10px 24px */
+        &.active{ background: #ffffff; color: #333333; border-color: #ffffff; }
+      }
+    } /* 20px ~ 28px */
+  }
+
+  /* TV + 안무 리스트 */
+.tv-row{
+  margin-top: 5rem; /* 14px */
+  margin-bottom: 5rem;  /* 80px */
+  display: grid; gap: 1.125rem; /* 18px */
+  grid-template-columns: minmax(43rem, 56rem) 14rem; /* 유튜브 TV 조절 */
+  @media (max-width: 960px){ grid-template-columns: 1fr; }
+}
+
+.tv{ 
+  position: relative; padding: 0.875rem; /* 14px */
+  overflow: visible;
+  isolation: isolate;
+  background: $primary-color;
+  border-radius: 0.875rem; /* 14px */
+  box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,.35); /* 14px 28px */
+  iframe, .tv-empty { width: 100%; aspect-ratio: 16/9; border: none; border-radius: 0.625rem; background:#000; } /* 10px */
+  .tv-empty{ display:flex; align-items:center; justify-content:center; color:#888; }
+
+  --ant-h: 2.6rem;      /* 막대 길이 */
+  --ant-w: 0.42rem;     /* 막대 두께 */
+  --ant-tilt: 28deg;    /* 기울기 각도 */
+  --ant-gap: 1rem;    /* 중앙에서 좌/우 떨어진 정도 */
+  --ant-tip: 0.62rem;   /* 끝 동그란 팁 지름 */
+}
+
+
+/* ===================== */
+/*       TV 안테나       */
+/* ===================== */
+
+/* 공통: 클릭 방해 X, 영상 위에 */
+.tv .ant,
+.tv .ant-tab{
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;           /* iframe 위 */
+}
+
+/* 막대 본체 */
+.tv .ant{
+  left: 50%;
+  /* 막대의 '밑동'이 TV 상단 바로 뒤에 붙도록 기준점 지정 */
+  bottom: calc(100% - 0.35rem);                     /* 막대 위아래 이동 */
+  width: var(--ant-w);
+  height: var(--ant-h);
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
+  transform-origin: bottom center;        /* 밑동을 기준으로 회전 */
+  z-index: -1;
+}
+
+/* 좌/우 위치 + 회전만 다르게 */
+.tv .ant-left {
+  transform: translateX(calc(-50% - var(--ant-gap))) rotate(calc(var(--ant-tilt) * -1));
+}
+.tv .ant-right{
+  transform: translateX(calc(-50% + var(--ant-gap))) rotate(var(--ant-tilt));
+}
+
+/* 막대 끝의 동그란 팁 */
+.tv .ant::after{
+  content:"";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% - var(--ant-w)/2);    /* 막대 끝을 조금 덮어 자연스럽게 */
+  transform: translateX(-50%);
+  width: var(--ant-tip);
+  height: var(--ant-tip);
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
+}
+
+/* 가운데 탭(기존 그대로 사용) */
+.tv .ant-tab{
+  left: 50%; top: -0.75rem; transform: translateX(-50%);
+  width: 3.2rem; height: 0.8rem;
+  background: $primary-color;
+  border-radius: 0.4rem 0.4rem 0 0;
+  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.12), 0 .5rem 1.2rem rgba(0,0,0,.25);
+}
+
+/* 반응형(선택) */
+@media (max-width: 980px){
+  .tv{
+    --ant-h: 2.1rem;
+    --ant-w: 0.4rem;
+    --ant-gap: 0.8rem;
+    --ant-tip: 0.56rem;
+    --ant-tilt: 26deg;
+  }
+  .tv .ant-tab{ width: 2.6rem; height: 0.6rem; top: -0.65rem; }
+}
+
+/* 만약 예전에 쓰던 .tv::before / .tv::after 장식이 남아있다면 비활성화(선택) */
+/* .tv::before, .tv::after { display: none !important; } */
+
+
+  /* How to Dance */
+  .howto{
+    margin-top: 4rem;
+    h3{
+      font-size: 2.5rem;
+    }
+    .tabs{
+      position: relative; height: 3.5rem; margin-bottom: 0.625rem; /* 56px, 10px */
+      .tab{
+        position: absolute; top: 0;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1rem; /* 12px 16px */
+        border-radius: 0.625rem 0.625rem 0 0; /* 10px */
+        border: 0.125rem solid rgba(255,255,255,.15); /* 2px */
+        background: #222; color: rgba(255,255,255,.7); font-weight: 700;
+        &.front{ z-index: 2; background: $primary-color; color: #fff; border-color: $primary-color; }
+        &.back{ z-index: 1; background: #222; }
+        &:first-child{ left: 0; }
+        &:last-child{ left: 6.875rem; } /* 110px */
+      }
+    }
+
+    .tab-panel{
+      background: #222; border: 0.125rem solid rgba(255,255,255,.15); /* 2px */
+      border-radius: 0 0.75rem 0.75rem 0.75rem; /* 12px */
+      padding: 0.75rem; /* 12px */
+      .video-cover{
+        margin-top: 0.5rem; /* 8px */
+        iframe{ width: 100%; aspect-ratio: 16/9; border: none; border-radius: 0.625rem; } /* 10px */
+      }
+    }
+
+    .cta-row{
+      display:flex; justify-content:flex-end; margin-top: 0.625rem; /* 10px */
+      .book{
+        background: $primary-color; color:#fff; border:none; border-radius: 0.75rem; /* 12px */
+        padding: 0.625rem 1rem; /* 10px 16px */
+        cursor:pointer; font-weight: 700;
+      }
+    }
+  }
+}
+
+/* ---------- 3) 예약 ---------- */
+.booking{
+  padding: 0.625rem 0 3.75rem; /* 10px 0 60px */
+
+  .book-grid{
+    display: grid; gap: 1.5rem; /* 24px */
+    grid-template-columns: 1fr 1.1fr;
+    @media (max-width: 980px){ grid-template-columns: 1fr; }
+  }
+
+  .left{
+    margin: 5rem 0 0 0;
+    .photo{
+      width: 100%; aspect-ratio: 4/3; background: #111 center/cover no-repeat;
+      border-radius: 0.875rem; /* 14px */
+      border: 0.25rem solid rgba(255,255,255,.12); /* 4px */
+      box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,.35); /* 14px 28px */
+    }
+    .dots{
+      display:flex; gap: 0.5rem; justify-content:center; margin-top: 0.625rem; /* 8px, 10px */
+      .dot{ width: 0.625rem; height: 0.625rem; border-radius:50%; border:none; background: rgba(255,255,255,.35); cursor:pointer; } /* 10px */
+      .dot.active{ background: #fff; }
+    }
+  }
+
+  .right{
+    h2{ margin: 6rem 0 0.75rem; font-size: clamp(2.2rem, 2.4vw, 1.75rem); text-align: center;} /* 4px 0 12px; 20~28px */
+
+    .table{
+      background: #222; border-radius: 0.75rem; /* 12px */
+      overflow: hidden; border: 0.125rem solid rgba(255,255,255,.1); /* 2px */
+      .thead, .row{
+        display: grid; grid-template-columns: 1.2fr 1fr .8fr .6fr; align-items:center; justify-items: center;
+      }
+      .thead{
+        background: $primary-color; color: #fff; font-weight: 800;
+        span{ padding: 0.75rem 0.875rem; } /* 12px 14px */
+      }
+      .tbody .row{
+        border-top: 0.0625rem solid rgba(255,255,255,.08); /* 1px */
+        span{ padding: 0.75rem 0.875rem; color: rgba(255,255,255,.9); } /* 12px 14px */
+      }
+      .pill{
+        min-width: 2.75rem; /* 44px */
+        padding: 0.375rem 0; /* 6px 0 */
+        border-radius: 999px; border: none; font-weight: 800; cursor: pointer;
+      }
+      .pill.ok{ background: #2ecc71; color: #0b2d17; }
+      .pill.disabled{ background: #e74c3c; color: #fff; cursor: not-allowed; }
+    }
+  }
+}
+
+/* 상단 컨트롤 바 */
+.booking .book-controls{
+  display: grid; gap: 0.75rem; margin: 0.5rem 0 1.125rem; /* 12px; 8px 0 18px */
+  grid-template-columns: 1fr 1fr 1.4fr;  // Location / Tutor / Time
+  @media (max-width: 980px){ grid-template-columns: 1fr; }
+
+  .control{
+    position: relative;
+    display: grid; grid-template-columns: 4.75rem 1fr; /* 76px 1fr */
+    align-items: center; gap: 0.625rem; /* 10px */
+  }
+  label{ color: rgba(255,255,255,.85); }
+
+  .dd-toggle{
+    display:flex; align-items:center; justify-content:space-between; gap:0.625rem; /* 10px */
+    width: 100%; padding: 0.625rem 0.875rem; /* 10px 14px */
+    border-radius: 0.625rem; /* 10px */
+    cursor: pointer;
+    background: #222; color:#fff;
+    border: 0.0625rem solid rgba(255,255,255,.2); /* 1px */
+    i{ opacity:.8; }
+  }
+
+  /* 공통 드롭다운 */
+  .dd-menu{
+    position: absolute; z-index: 10; left: 4.75rem; right: 0; top: 100%; /* 76px */
+    margin-top: 0.375rem; /* 6px */
+    background:#1b1b1b;
+    border: 0.0625rem solid rgba(255,255,255,.15); /* 1px */
+    border-radius: 0.625rem; /* 10px */
+    box-shadow: 0 0.75rem 1.75rem rgba(0,0,0,.35); /* 12px 28px */
+    overflow: hidden;
+  }
+  .dd-item{
+    padding: 0.625rem 0.75rem; /* 10px 12px */
+    color: #fff; cursor: pointer;
+    border-bottom: 0.0625rem solid rgba(255,255,255,.06); /* 1px */
+    &:last-child{ border-bottom: 0; }
+    &:hover{ background: #2a2a2a; }
+    &.active{ background: #ff7423; color: #fff; }
+  }
+  /* 스크롤 가능한 목록: 3~4개 높이로 제한 */
+  .dd-menu.scroll{ max-height: 10.5rem; overflow-y: auto; } /* 168px ≈ 4 items */
+
+  /* Time 전용 박스 */
+  .dd-menu.timebox{
+    padding: 0.625rem 0.75rem; /* 10px 12px */
+    .row{ display:flex; align-items:center; gap:0.625rem; padding: 0.5rem 0; } /* 10px, 8px 0 */
+    .row span{ width: 3rem; color: rgba(255,255,255,.75); } /* 48px */
+    input[type="date"], input[type="time"]{
+      background:#222; color:#fff; border:0.0625rem solid rgba(255,255,255,.2); /* 1px */
+      padding: 0.5rem 0.625rem; border-radius: 0.5rem; /* 8px */
+    }
+    .time-range{ display:flex; align-items:center; gap:0.5rem; /* 8px */
+      em{ color: rgba(255,255,255,.6); }
+    }
+    .row.actions{ justify-content:flex-end; gap:0.5rem; } /* 8px */
+    .ghost{
+      background:#222; color:#fff;
+      border:0.0625rem dashed rgba(255,255,255,.3); /* 1px */
+      padding:0.5rem 0.75rem; border-radius:0.625rem; /* 8px 12px -> 10px radius */
+    }
+    .apply{
+      background:#ff7423; color:#fff; border:none;
+      padding:0.5rem 0.75rem; border-radius:0.625rem; font-weight:700; /* 8px 12px, 10px */
+    }
+  }
+}
+
+/* ‘All Tutors’일 때 테이블 열 확장 */
+.booking .book-grid.all .right .table{
+  .thead, .row{ grid-template-columns: 1fr 1fr 1fr 1fr .8fr .6fr; } /* Tutor 추가 */
+}
+
+/* --- 예약 표: 2번 이미지 스타일 (오버라이드) --- */
+.booking .right .table{
+  background: #2a2a2a;
+  border-radius: 0.75rem; /* 12px */
+  overflow: hidden;
+  border: 0.125rem solid rgba(255,255,255,.08); /* 2px */
+}
+
+/* 헤더 바: 주황색 띠 */
+.booking .right .table .thead{
+  display: grid;
+  grid-template-columns: 1fr 1fr .9fr .6fr; /* compact 기본: Date / Time / Reservation / Book */
+  background: $primary-color;
+  color: #fff;
+  font-weight: 800;
+}
+.booking .right .table.compact .thead { grid-template-columns: 1fr 1fr .9fr .6fr; }
+.booking .right .table.all .thead { grid-template-columns: 1fr 1fr 1fr 1fr .9fr .6fr; }
+
+.booking .right .table .thead .hcol{ padding: 0.75rem 0.875rem; } /* 12px 14px */
+
+/* 바디 행 */
+.booking .right .table .tbody .row{
+  display: grid;
+  grid-template-columns: 1fr 1fr .9fr .6fr; /* compact 기본 */
+  align-items: center;
+  border-top: 0.0625rem solid rgba(255,255,255,.08); /* 1px */
+  background: mix($primary-color, $background-color, 18%);
+}
+.booking .right .table.compact .tbody .row{ grid-template-columns: 1fr 1fr .9fr .6fr; }
+.booking .right .table.all .tbody .row{ grid-template-columns: 1fr 1fr 1fr 1fr .9fr .6fr; }
+
+.booking .right .table .tbody .row:nth-child(odd){ background: mix($primary-color, $background-color, 12%); }
+
+.booking .right .table .tbody .row > span{
+  padding: 0.75rem 0.875rem; /* 12px 14px */
+  color: rgba(255,255,255,.92);
+}
+
+/* 빈 상태 */
+.booking .right .table .tbody .row.empty{
+  grid-template-columns: 1fr;
+  background: #222;
+}
+
+/* Book 버튼(Pill) */
+.booking .right .table .pill{
+  min-width: 2.75rem; height: 1.75rem; /* 44px, 28px */
+  border-radius: 999px; border: none;
+  font-weight: 800; cursor: pointer;
+}
+.booking .right .table .pill.ok{ background: #2ecc71; color: #0b2d17; }
+.booking .right .table .pill.disabled{ background: #e74c3c; color: #fff; cursor: not-allowed; }

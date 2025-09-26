@@ -1,0 +1,21 @@
+@import './styles/fonts';
+@import './styles/variables';
+
+*{
+  font-family: 'Gugi', cursive;
+  list-style: none;
+}
+Header{
+  position: fixed;
+  z-index: 999;
+}
+main{
+    /* padding: 4rem 2rem; */
+    width: 100%;
+    min-height: 100vh;
+    background: #333;
+    color: $primary-color;
+    position: relative;
+    top: -4rem;
+    left: 0;
+}

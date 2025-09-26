@@ -1,0 +1,163 @@
+@import '../styles/fonts'; 
+@import '../styles/variables';
+
+.community-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  padding-top: 8rem; // 영상/맵과 균형 맞춤
+  box-sizing: border-box;
+
+  .sidebar {
+    flex: 1;
+    height: 85%;
+    overflow-y: auto;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+
+    .top-list {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      h3 { font-size: 2.4rem; margin-bottom: 1rem; }
+
+      .top-item {
+        margin-top: 1rem;
+
+        video { 
+          width: 100%;
+          height: auto; 
+          object-fit: cover; 
+          border: 2px solid $primary-color; 
+          border-radius: 0.5rem;
+        }
+      }
+    }
+
+    .bottom-rank {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+
+      .country-filter {
+        margin-bottom: 1rem;
+        select {
+          width: 100%;
+          padding: 0.4rem;
+          background: $primary-color;
+          border: 2px solid $primary-color;
+          color: #fff;
+          border-radius: 0.3rem;
+          cursor: pointer;
+
+          &:focus { outline: none; }
+          option {
+            background: #333;
+            color: $primary-color;
+          }
+        }
+      }
+
+      .rankTable {
+        .rank-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.5rem;
+
+          h3 { margin-bottom: 0; font-size: 1.6rem; }
+          .pagination button {
+            margin-left: 0.5rem;
+            padding: 0.3rem 0.6rem;
+            background: $primary-color;
+            color: #fff;
+            border: none;
+            border-radius: 0.3rem;
+            cursor: pointer;
+            font-size: 1.2rem;
+
+            &:disabled {
+              opacity: 0.5;
+              cursor: not-allowed;
+            }
+          }
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 1.4rem;
+
+          th, td {
+            border: 1px solid $primary-color;
+            padding: 0.4rem;
+            text-align: center;
+          }
+
+          tr {
+            cursor: pointer;
+            &:hover { background: rgba($primary-color, 0.15); }
+            &.active {
+              background: rgba($primary-color, 0.3);
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .Right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .map-wrapper { 
+      width: 100%;
+      height: 50%;
+      border: 2px solid $primary-color;
+      border-radius: 0.5rem;
+      filter: hue-rotate(30%);
+      overflow: hidden;
+    }
+
+    .video-player {
+      margin-top: 1rem;
+      width: 100%;
+      height: 40%;
+      border: 2px solid $primary-color;
+      border-radius: 0.5rem;
+
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .marker {
+      width: 1.2rem; 
+      height: 1.2rem; 
+      border-radius: 50%; 
+      background: rgba($primary-color, 0.5);
+      border: 1px solid #fff;
+      transition: all 0.2s ease;
+
+      &.selected { 
+        background: $primary-color; 
+        width: 1.6rem; 
+        height: 1.6rem; 
+      }
+    }
+  }
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .community-container { flex-direction: column; height: auto; padding-top: 4rem; }
+  .sidebar { width: 100%; flex-direction: column; }
+  .Right { width: 100%; .map-wrapper { height: 40vh; } }
+}
