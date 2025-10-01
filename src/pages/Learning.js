@@ -18,11 +18,152 @@ const TUTORS = [
     // --- 요약/소개 ---
     summary: "1MILLION 공동창립·총괄 안무가, 스우파2 출연",
     career: [
-      "댄스 시작: 2005",
-      "원밀리언 스튜디오 오픈: 2014–현재",
+      "댄스 시작 : 2005",
+      "원밀리언 스튜디오 오픈 : 2014~현재",
     ],
     bio: ['K-POP 안무가/디렉터. 원밀리언 스튜디오 대표',
+          '스타일 : Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2007, title: "World Dance Competition 4DA NEXT LEVEL", result: "관객 우승" },
+      { year: 2008, title: "4DA NEXT LEVEL", result: "판정 우승 및 랭킹 준우승" },
+      { year: 2009, title: "POP LOCK LAIDIES 팝핑", result: "우승자" },
+      { year: 2012, title: "JAPAN Dance Delight vol.12", result: "FINAL 3위" },
+      { year: 2013, title: "도시 힙합 페스티벌", result: "우승" },
+      { year: 2016, title: "Soul Party 팝핑 부문", result: "우승" },
+      { year: 2018, title: "가온차트 뮤직어워즈", result: "올해의 스타일상 커리어그라피 부문 수상" },
+      { year: 2019, title: "제10회 대한민국 대중문화예술상", result: "문화체육관광부장관 표창" },
+      { year: 2019, title: " MGMA 퍼포먼스 크리에이터", result: "수상" },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "Main Studio",
+      address: "서울특별시 성동구 뚝섬로13길 33",
+    },
+    studioPhotos: [
+      "/img/studio/tutor1_studio1.jpg",
+      "/img/studio/tutor1_studio2.jpg",
+      "/img/studio/tutor1_studio3.jpg"
+    ],
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "가시나", youtubeId: "2yepkSVeVsM" },
+      { title: "HIP", youtubeId: "US2B33WeIak" },
+      { title: "24시간이 모자라", youtubeId: "L65eFdY9RRI" },
+      { title: "딩가딩가", youtubeId: "X6Brmaf27Tg" },
+      { title: "사이렌", youtubeId: "MEQrAsB-2lY" },
+      { title: "우아하게", youtubeId: "cszZgUUwLjE" },
+      { title: "너무너무너무", youtubeId: "dpdwX9TVO8s" },
+      { title: "WANNABE", youtubeId: "Vp9I_m6znMM" },
+    ],
+    // --- 예약 시간표 ---
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "2yepkSVeVsM"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
+  },
+
+  { 
+    id: "leejung",
+    name: "리정",
+    profile: "/img/Tutor/Tutor2.jpg",
+    // --- 요약/소개 ---
+    summary: "스우파1 출연",
+    career: [
+      "댄스 시작 : 2014",
+      "Just Jerk 크루 1기 (2014년~2019년)",
+      "NWX (2019년~2024년)",
+      "YGX (2021년~2024년)",
+      "BUMSUP (2025년~)",
+    ],
+    bio: ['K-POP 안무가',
           '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2016, title: "Body Rock", result: "1위" },
+      { year: 2016, title: "Feedback2show [Duet Side]", result: "1위" },
+      { year: 2017, title: "아시아 아티스트 어워즈 AAA 초이스", result: "수상" },
+      { year: 2019, title: "FEEDBACK COMPETITION 7", result: "2위" },
+      { year: 2021, title: "엠넷 아시안 뮤직 어워드 2021 BEST CHOREOGRAPHER OF THE YEAR", result: "베스트 안무가 수상" },
+      { year: 2023, title: "MTV 비디오 뮤직 어워드", result: "BEST CHOREOGRAPY 수상" },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "어반플레이에서  주로 팝업으로 수업",
+      /* address: "서울특별시 성동구 뚝섬로13길 33", */
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "FANCY", youtubeId: "AsWNxxvcbjI" },
+      { title: "Dumb Dumb", youtubeId: "QaSCBw6VXBI" },
+      { title: "LALISA", youtubeId: "_05p2tOUcsw" },
+      { title: "MONEY", youtubeId: "D75cj2mFwDM" },
+      { title: "Pink Venom", youtubeId: "T_XI4-EtUzM" },
+      { title: "You & Me", youtubeId: "VXYGiVM3byI" },
+      { title: "Shut Down", youtubeId: "H8iSLupSa2o" },
+      { title: "What you waiting for", youtubeId:"Mm7YqIZm65A" },
+    ],
+    // --- 예약 시간표 ---
+    timetable: [
+      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
+  },
+  { 
+    id: "choi",
+    name: "최영준",
+    profile: "/img/Tutor/Tutor3.jpg",
+    summary: "1MILLION 이사",
+    career: [
+      "댄스 시작 : 2011",
+    ],
+    bio: ['K-POP 안무가/디렉터. 프로듀스48/프듀X101 댄스트레이너 - ',
+          '스타일 : Urban/Choreography.',
     ],
     // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
     awards: [
@@ -46,22 +187,32 @@ const TUTORS = [
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
-      { title: "가시나", youtubeId: "2yepkSVeVsM" },
-      { title: "HIP", youtubeId: "US2B33WeIak" },
-      { title: "24시간이 모자라", youtubeId: "L65eFdY9RRI" },
-      { title: "딩가딩가", youtubeId: "X6Brmaf27Tg" },
-      { title: "사이렌", youtubeId: "MEQrAsB-2lY" },
-      { title: "우아하게", youtubeId: "cszZgUUwLjE" },
-      { title: "너무너무너무", youtubeId: "dpdwX9TVO8s" },
-      { title: "WANNABE", youtubeId: "Vp9I_m6znMM" },
+      { title: "숲의 아이", youtubeId: "4vQazFmoAQ8" },
+      { title: "예쁘다", youtubeId: "TpHfh9VUOek" },
+      { title: "울고 싶지 않아", youtubeId: "l1u4-fMdtns" },
+      { title: "붐붐", youtubeId: "aJgedY9KXaQ" },
+      { title: "DRAMARAMA", youtubeId: "FyPWZOivEYk" },
+      { title: "Beautiful", youtubeId: "DmdezafV6ko" },
+      { title: "첫 만남은 계획대로 되지 않아", youtubeId: "9f6AdfijSTg" },
+      { title: "유리구슬", youtubeId: "5Sd4FByvxQk" },
     ],
     // --- 예약 시간표 ---
     timetable: [
       { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
       { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
-      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 }
+      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
     ],
     howto: {
       basic: "TZA5ajIjxFk",   
@@ -69,39 +220,6 @@ const TUTORS = [
     },
     // 필요 시 태그/장르 등
     tags: ["K-pop", "Urban", "Choreo"]
-  },
-  // 나머지 9명은 같은 형식으로 추가 (임시 샘플)
-  { 
-    id: "leejung",
-    name: "리정",
-    profile: "/img/Tutor/Tutor2.jpg",
-    studioPhotos: ["/img/studio/leejung_1.jpg"],
-    choreos: [
-      { title: "치맛바람", youtubeId: "sZ1q4b9m9t8" },
-    ],
-    timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
-  },
-  { 
-    id: "choi",
-    name: "최영준",
-    profile: "/img/Tutor/Tutor3.jpg",
-    studioPhotos: ["/img/studio/choi_1.jpg"],
-    choreos: [
-      { title: "Nxde", youtubeId: "fCO7f0SmrDc" },
-    ],
-    timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
   },
     { 
     id: "gabee",
@@ -286,21 +404,31 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
       <button className="back" onClick={onBack}>← 목록으로</button>
 
       <div className="hero">
-        <div className="portrait" style={{ backgroundImage: `url(${tutor.profile})` }} />
-        <div className="bio">
-          <h2>Tutor - {tutor.name}</h2>
-          <p className="muted">{tutor.summary}</p>
-          <br></br>
-          <section className="about">
-          <h3>경력</h3>
-          <ul>{tutor.career.map((c,i)=><li key={i}>{c}</li>)}</ul>
-          
-          {/* TV 프레임 + 오른쪽 안무 리스트 */}
+        {/* 왼쪽: 사진 + (이름/summary/career) 만 sticky */}
+        <aside className="sidebar">
+          <div
+            className="portrait"
+            style={{ backgroundImage: `url(${tutor.profile})` }}
+          />
+          <div className="mini-bio">
+            <h2>Tutor - {tutor.name}</h2>
+            {tutor.summary && <p className="muted">{tutor.summary}</p>}
+
+            {(tutor?.career?.length || 0) > 0 && (
+              <>
+                <h3>경력</h3>
+                <ul>{tutor.career.map((c, i) => <li key={i}>{c}</li>)}</ul>
+              </>
+            )}
+          </div>
+        </aside>
+
+        {/* 오른쪽: TV/안무 리스트/수상/소개/How to Dance */}
+        <div className="main-col">
           <div className="tv-row">
             <div className="tv">
               <i className="ant ant-left"  aria-hidden="true" />
               <i className="ant ant-right" aria-hidden="true" />
-              {/* <i className="ant-tab"      aria-hidden="true" /> */}
               {activeChoreo ? (
                 <iframe
                   title={activeChoreo.title}
@@ -315,7 +443,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
 
             <ul className="choreo-list">
               {tutor.choreos.map((c) => {
-                const active = activeChoreo && c.title === activeChoreo.title;
+                const active = !!activeChoreo && c.title === activeChoreo.title;
                 return (
                   <li
                     key={c.title}
@@ -329,20 +457,30 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
             </ul>
           </div>
 
-          <h3>수상 내역</h3>
-          <ul>{tutor.awards.map((a,i)=><li key={i}>
-            {a.year} · {a.title} {a.result && `– ${a.result}`}
-          </li>)}</ul>
+          {/* (원하면) 수상/소개는 오른쪽에 그대로 */}
+          {(tutor?.awards?.length || 0) > 0 && (
+            <>
+              <h3>수상 내역</h3>
+              <ul>
+                {tutor.awards.map((a, i) => (
+                  <li key={i}>
+                    {a.year} · {a.title} {a.result ? `– ${a.result}` : ""}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
 
-          {tutor.bio && (<>
-            <h3>소개</h3>
-            <p className="muted" style={{whiteSpace:"pre-line"}}>{tutor.bio}</p>
-          </>)}
-        </section>
+          {tutor.bio && (
+            <>
+              <h3>소개</h3>
+              <p className="muted" style={{ whiteSpace: "pre-line" }}>{tutor.bio}</p>
+            </>
+          )}
 
           <div className="line" />
 
-          {/* How to Dance (책갈피) */}
+          {/* How to Dance는 오른쪽에 그대로 */}
           <div className="howto">
             <h3>How to Dance</h3>
 
@@ -368,7 +506,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
                   <div className="video-cover">
                     <iframe
                       title="기본기"
-                      src={`https://www.youtube.com/embed/${howtoBasicId}`}
+                      src={`https://www.youtube.com/embed/${tutor?.howto?.basic || "0qisGSwZym4"}`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
@@ -380,7 +518,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
                   <div className="video-cover">
                     <iframe
                       title="K-pop"
-                      src={`https://www.youtube.com/embed/${howtoKpopId}`}
+                      src={`https://www.youtube.com/embed/${(activeChoreo?.youtubeId) || tutor?.howto?.kpop || "E5ONTXHS2mM"}`}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
@@ -389,7 +527,6 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
               )}
             </div>
 
-
             <div className="cta-row">
               <button className="book" onClick={onBook}>예약하기</button>
             </div>
@@ -397,6 +534,7 @@ function TutorDetail({ tutor, activeChoreo, setActiveChoreo, activeTab, setActiv
         </div>
       </div>
     </section>
+
   );
 }
 /* ---------- 3) 예약 페이지 (필터 드롭다운 + 스크롤) ---------- */
@@ -442,11 +580,19 @@ function Booking({ tutor, onBack }) {
   }, []);
 
   // ---- 3초 자동 슬라이드 (현재 선택 튜터 사진) ----
-  const photos = (currentTutor?.studioPhotos?.length ? currentTutor.studioPhotos : defaultPhotos);
+  const photos =
+    (currentTutor?.studio?.photos?.length ? currentTutor.studio.photos :
+    currentTutor?.studioPhotos?.length ? currentTutor.studioPhotos :
+    defaultPhotos);
+
+  // 슬라이드 타이머
   useEffect(() => {
-    timerRef.current = setInterval(() => setIdx(i => (i + 1) % photos.length), 3000);
-    return () => clearInterval(timerRef.current);
-  }, [photos.length]);
+    setIdx(0); // 튜터/사진 변경 시 처음부터
+    const id = setInterval(() => setIdx(i => (i + 1) % photos.length), 3000);
+    return () => clearInterval(id);
+  }, [photos]); // length만 두지 말고 배열 참조 자체를 의존성으로
+
+
   const pause = () => clearInterval(timerRef.current);
   const play  = () => {
     clearInterval(timerRef.current);

@@ -106,37 +106,56 @@ $background-color: #333333;
 .tutor-detail {
   padding: 0.625rem 0 3.125rem; /* 10px 0 50px */
 
+  /* 왼쪽(사진+미니바이오) / 오른쪽(본문) 2열 */
   .hero{
     display: grid;
-    /* 사진 크기(14.5rem)에 맞춰 첫 컬럼 고정 + 가로 간격 넓힘 */
-    grid-template-columns: 15rem 1fr; /* 이전 220px 1fr */
-    column-gap: 3.5rem;  /* ← 여기! 이미지와 오른쪽 사이 여백 */
+    grid-template-columns: 15rem 1fr; /* 왼쪽 고정, 오른쪽 유동 */
+    column-gap: 3.5rem;
     row-gap: 1rem;
 
     @media (max-width: 1100px){
       grid-template-columns: 13.5rem 1fr;
-      column-gap: 2rem;   /* 화면 줄어들면 살짝 축소 */
+      column-gap: 2rem;
     }
     @media (max-width: 820px){
-      grid-template-columns: 1fr;  /* 모바일은 세로 스택 */
+      grid-template-columns: 1fr; /* 모바일은 1열 */
       column-gap: 0;
       row-gap: 1.25rem;
     }
+    .sidebar{
+      .portrait{}
+      .mini-bio{
+        h2{text-align: center;}
+        .muted{font-size: 0.9rem; text-align: center;}
+        h3{font-size: 1.3rem; margin-top: 2rem; margin-left: 0.5rem;}
+        ul{
+          li{font-size: 0.9rem;}
+        }
+      }
+    }
+  }
+
+  /* ========== 왼쪽: 사진 + 이름/summary/경력(sticky) ========== */
+  .sidebar{
+    position: sticky;
+    top: 84px;         /* 헤더 높이에 맞춰 조정 */
+    align-self: start;
   }
 
   .portrait{
-    width: 15rem; height: 15rem; /* 220px */
+    width: 15rem; height: 15rem; /* 240px */
     border-radius: 50%;
     background: #222 center / 112% no-repeat;
     border: none;
+    margin-bottom: 0.75rem;
     box-shadow:
-      0 0 0 0.3125rem rgba(255,255,255,.16),  /* 바깥 테두리(약 5px) */
-      0 0.875rem 1.5rem rgba(0,0,0,.35);      /* 아래 그림자 */
+      0 0 0 0.3125rem rgba(255,255,255,.16),
+      0 0.875rem 1.5rem rgba(0,0,0,.35);
 
     @media (max-width: 1100px){ width: 13.5rem; height: 13.5rem; }
     @media (max-width: 820px){  width: 12.5rem; height: 12.5rem; }
   }
-   @media (hover:hover){
+  @media (hover:hover){
     .portrait:hover{
       background-size: 116%;
       box-shadow:
@@ -145,173 +164,186 @@ $background-color: #333333;
     }
   }
 
-  .bio{
-    h2{ margin: 0 0 0.8rem; font-size: clamp(2.5rem, 2.6vw, 1.75rem); }
-    h3{ margin: 2rem 0 0.5rem; font-size: 1.7rem;}
-    li{ margin-bottom: 0.7rem;}
-    .choreo-list{/* 안무 리스트 */
-      list-style:none; margin:0; padding:0;
-      li{
-        background: #fff; color: $text-dark;
-        padding: 0.625rem 0.75rem; /* 10px 12px */
-        border-radius: 0.625rem;   /* 10px */
-        margin-bottom: 0.5rem;   /* 10px */
-        cursor: pointer;
-        font-weight: 600;
-        border: 0.125rem solid transparent; /* 2px */
-        transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
-        &:hover{ transform: translateY(-0.125rem); box-shadow: 0 0.625rem 1.5rem rgba(0,0,0,.3); } /* 2px, 10px 24px */
-        &.active{ background: #ffffff; color: #333333; border-color: #ffffff; }
-      }
-    } /* 20px ~ 28px */
+  /* 사진 아래 붙는 작은 카드 */
+  .mini-bio{
+    background: #222;
+    border: 0.125rem solid rgba(255,255,255,.12);
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.875rem;
+
+    h2{ margin: 0 0 0.6rem; font-size: clamp(1.25rem, 2.2vw, 1.75rem); }
+    .muted{ margin: 0 0 0.6rem; }
+    h3{ margin: 0.5rem 0 0.375rem; font-size: 1.05rem; }
+    ul{ margin: 0; padding-left: 1rem; }
+    li{ margin-bottom: 0.35rem; }
   }
+
+  /* ========== 오른쪽 본문(스크롤) ========== */
+  .main-col{ min-width: 0; 
+    h3{font-size: 1.7rem; margin-bottom: 0.7rem; margin-top: 3rem;}
+    p{}
+    ul{
+      li{margin-bottom: 0.8rem;}
+    }
+  } /* grid overflow 방지 */
 
   /* TV + 안무 리스트 */
-.tv-row{
-  margin-top: 5rem; /* 14px */
-  margin-bottom: 5rem;  /* 80px */
-  display: grid; gap: 1.125rem; /* 18px */
-  grid-template-columns: minmax(43rem, 56rem) 14rem; /* 유튜브 TV 조절 */
-  @media (max-width: 960px){ grid-template-columns: 1fr; }
-}
-
-.tv{ 
-  position: relative; padding: 0.875rem; /* 14px */
-  overflow: visible;
-  isolation: isolate;
-  background: $primary-color;
-  border-radius: 0.875rem; /* 14px */
-  box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,.35); /* 14px 28px */
-  iframe, .tv-empty { width: 100%; aspect-ratio: 16/9; border: none; border-radius: 0.625rem; background:#000; } /* 10px */
-  .tv-empty{ display:flex; align-items:center; justify-content:center; color:#888; }
-
-  --ant-h: 2.6rem;      /* 막대 길이 */
-  --ant-w: 0.42rem;     /* 막대 두께 */
-  --ant-tilt: 28deg;    /* 기울기 각도 */
-  --ant-gap: 1rem;    /* 중앙에서 좌/우 떨어진 정도 */
-  --ant-tip: 0.62rem;   /* 끝 동그란 팁 지름 */
-}
-
-
-/* ===================== */
-/*       TV 안테나       */
-/* ===================== */
-
-/* 공통: 클릭 방해 X, 영상 위에 */
-.tv .ant,
-.tv .ant-tab{
-  position: absolute;
-  pointer-events: none;
-  z-index: 2;           /* iframe 위 */
-}
-
-/* 막대 본체 */
-.tv .ant{
-  left: 50%;
-  /* 막대의 '밑동'이 TV 상단 바로 뒤에 붙도록 기준점 지정 */
-  bottom: calc(100% - 0.35rem);                     /* 막대 위아래 이동 */
-  width: var(--ant-w);
-  height: var(--ant-h);
-  background: #fff;
-  border-radius: 999px;
-  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
-  transform-origin: bottom center;        /* 밑동을 기준으로 회전 */
-  z-index: -1;
-}
-
-/* 좌/우 위치 + 회전만 다르게 */
-.tv .ant-left {
-  transform: translateX(calc(-50% - var(--ant-gap))) rotate(calc(var(--ant-tilt) * -1));
-}
-.tv .ant-right{
-  transform: translateX(calc(-50% + var(--ant-gap))) rotate(var(--ant-tilt));
-}
-
-/* 막대 끝의 동그란 팁 */
-.tv .ant::after{
-  content:"";
-  position: absolute;
-  left: 50%;
-  bottom: calc(100% - var(--ant-w)/2);    /* 막대 끝을 조금 덮어 자연스럽게 */
-  transform: translateX(-50%);
-  width: var(--ant-tip);
-  height: var(--ant-tip);
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
-}
-
-/* 가운데 탭(기존 그대로 사용) */
-.tv .ant-tab{
-  left: 50%; top: -0.75rem; transform: translateX(-50%);
-  width: 3.2rem; height: 0.8rem;
-  background: $primary-color;
-  border-radius: 0.4rem 0.4rem 0 0;
-  box-shadow: 0 0 0 0.18rem rgba(0,0,0,.12), 0 .5rem 1.2rem rgba(0,0,0,.25);
-}
-
-/* 반응형(선택) */
-@media (max-width: 980px){
-  .tv{
-    --ant-h: 2.1rem;
-    --ant-w: 0.4rem;
-    --ant-gap: 0.8rem;
-    --ant-tip: 0.56rem;
-    --ant-tilt: 26deg;
+  .tv-row{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: grid; gap: 1.125rem;
+    grid-template-columns: minmax(45rem, 56rem) 14rem; /* 유튜브 TV 폭 조절 */
+    @media (max-width: 960px){ grid-template-columns: 1fr; }
   }
-  .tv .ant-tab{ width: 2.6rem; height: 0.6rem; top: -0.65rem; }
-}
 
-/* 만약 예전에 쓰던 .tv::before / .tv::after 장식이 남아있다면 비활성화(선택) */
-/* .tv::before, .tv::after { display: none !important; } */
+  .tv{
+    position: relative;
+    padding: 0.875rem;
+    overflow: visible;
+    isolation: isolate;
+    background: $primary-color;
+    border-radius: 0.875rem;
+    box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,.35);
 
+    iframe, .tv-empty{
+      width: 100%; aspect-ratio: 16/9;
+      border: none; border-radius: 0.625rem; background:#000;
+    }
+    .tv-empty{ display:flex; align-items:center; justify-content:center; color:#888; }
 
-  /* How to Dance */
+    /* 안테나 변수 */
+    --ant-h: 2.6rem;      /* 막대 길이 */
+    --ant-w: 0.42rem;     /* 막대 두께 */
+    --ant-tilt: 28deg;    /* 기울기 각도 */
+    --ant-gap: 1rem;      /* 좌/우 간격 */
+    --ant-tip: 0.62rem;   /* 동그란 팁 지름 */
+  }
+
+  /* 안무 리스트 (오른쪽 카드) */
+  .choreo-list{
+    list-style:none; margin:0; padding:0;
+    li{
+      background: #fff; color: $text-dark;
+      padding: 0.625rem 0.75rem;
+      border-radius: 0.625rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer; font-weight: 600;
+      border: 0.125rem solid transparent;
+      transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+      &:hover{ transform: translateY(-0.125rem); box-shadow: 0 0.625rem 1.5rem rgba(0,0,0,.3); }
+      &.active{ background:#ffffff; color:#333333; border-color:#ffffff; }
+    }
+  }
+
+  /* ===================== */
+  /*       TV 안테나       */
+  /* ===================== */
+  .tv .ant,
+  .tv .ant-tab{
+    position: absolute;
+    pointer-events: none;
+    z-index: 2; /* iframe 위 */
+  }
+
+  .tv .ant{
+    left: 50%;
+    bottom: calc(100% - 0.35rem); /* TV 상단 뒤에서 올라오게 */
+    width: var(--ant-w);
+    height: var(--ant-h);
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
+    transform-origin: bottom center;
+    z-index: -1; /* TV 뒤로 */
+  }
+  .tv .ant-left  { transform: translateX(calc(-50% - var(--ant-gap))) rotate(calc(var(--ant-tilt) * -1)); }
+  .tv .ant-right { transform: translateX(calc(-50% + var(--ant-gap)))  rotate(var(--ant-tilt)); }
+
+  .tv .ant::after{
+    content:"";
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% - var(--ant-w)/2);
+    transform: translateX(-50%);
+    width: var(--ant-tip);
+    height: var(--ant-tip);
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.18rem rgba(0,0,0,.15);
+  }
+
+  /* 필요 시 중앙 탭(현재는 미사용) */
+  .tv .ant-tab{
+    left: 50%; top: -0.75rem; transform: translateX(-50%);
+    width: 3.2rem; height: 0.8rem;
+    background: $primary-color;
+    border-radius: 0.4rem 0.4rem 0 0;
+    box-shadow: 0 0 0 0.18rem rgba(0,0,0,.12), 0 .5rem 1.2rem rgba(0,0,0,.25);
+  }
+
+  @media (max-width: 980px){
+    .tv{
+      --ant-h: 2.1rem;
+      --ant-w: 0.4rem;
+      --ant-gap: 0.8rem;
+      --ant-tip: 0.56rem;
+      --ant-tilt: 26deg;
+    }
+    .tv .ant-tab{ width: 2.6rem; height: 0.6rem; top: -0.65rem; }
+  }
+
+  /* How to Dance (기존 유지) */
   .howto{
     margin-top: 4rem;
-    h3{
-      font-size: 2.5rem;
-    }
+    h3{ font-size: 2.5rem; }
+
     .tabs{
-      position: relative; height: 3.5rem; margin-bottom: 0.625rem; /* 56px, 10px */
+      position: relative; height: 3.5rem; margin-bottom: 0.625rem;
       .tab{
         position: absolute; top: 0;
         margin-top: 1.5rem;
-        padding: 0.75rem 1rem; /* 12px 16px */
-        border-radius: 0.625rem 0.625rem 0 0; /* 10px */
-        border: 0.125rem solid rgba(255,255,255,.15); /* 2px */
+        padding: 0.75rem 1rem;
+        border-radius: 0.625rem 0.625rem 0 0;
+        border: 0.125rem solid rgba(255,255,255,.15);
         background: #222; color: rgba(255,255,255,.7); font-weight: 700;
         &.front{ z-index: 2; background: $primary-color; color: #fff; border-color: $primary-color; }
         &.back{ z-index: 1; background: #222; }
         &:first-child{ left: 0; }
-        &:last-child{ left: 6.875rem; } /* 110px */
+        &:last-child{ left: 6.875rem; }
       }
     }
 
     .tab-panel{
-      background: #222; border: 0.125rem solid rgba(255,255,255,.15); /* 2px */
-      border-radius: 0 0.75rem 0.75rem 0.75rem; /* 12px */
-      padding: 0.75rem; /* 12px */
+      background: #222; border: 0.125rem solid rgba(255,255,255,.15);
+      border-radius: 0 0.75rem 0.75rem 0.75rem;
+      padding: 0.75rem;
       .video-cover{
-        margin-top: 0.5rem; /* 8px */
-        iframe{ width: 100%; aspect-ratio: 16/9; border: none; border-radius: 0.625rem; } /* 10px */
+        margin-top: 0.5rem;
+        iframe{ width: 100%; aspect-ratio: 16/9; border: none; border-radius: 0.625rem; }
       }
     }
 
     .cta-row{
-      display:flex; justify-content:flex-end; margin-top: 0.625rem; /* 10px */
+      display:flex; justify-content:flex-end; margin-top: 0.625rem;
       .book{
-        background: $primary-color; color:#fff; border:none; border-radius: 0.75rem; /* 12px */
-        padding: 0.625rem 1rem; /* 10px 16px */
-        cursor:pointer; font-weight: 700;
+        background: $primary-color; color:#fff; border:none; border-radius: 0.75rem;
+        padding: 0.625rem 1rem; cursor:pointer; font-weight: 700;
       }
     }
   }
+
+  /* 모바일에서는 sticky 해제(자연스럽게 위→아래 흐름) */
+  @media (max-width: 820px){
+    .sidebar{ position: static; }
+  }
 }
+
 
 /* ---------- 3) 예약 ---------- */
 .booking{
   padding: 0.625rem 0 3.75rem; /* 10px 0 60px */
+  --row-h: 3rem;      /* 본문 1행 높이 */
+  --header-h: 2.5rem; /* 헤더 높이 */
 
   .book-grid{
     display: grid; gap: 1.5rem; /* 24px */
@@ -322,35 +354,71 @@ $background-color: #333333;
   .left{
     margin: 5rem 0 0 0;
     .photo{
-      width: 100%; aspect-ratio: 4/3; background: #111 center/cover no-repeat;
+      height: calc(var(--header-h) + var(--row-h) * 9.3); aspect-ratio: auto; background: #111 center/cover no-repeat;
       border-radius: 0.875rem; /* 14px */
       border: 0.25rem solid rgba(255,255,255,.12); /* 4px */
       box-shadow: 0 0.875rem 1.75rem rgba(0,0,0,.35); /* 14px 28px */
     }
     .dots{
-      display:flex; gap: 0.5rem; justify-content:center; margin-top: 0.625rem; /* 8px, 10px */
-      .dot{ width: 0.625rem; height: 0.625rem; border-radius:50%; border:none; background: rgba(255,255,255,.35); cursor:pointer; } /* 10px */
+      display:flex; gap: 0.5rem; justify-content:center; margin-top: 0.625rem;
+      .dot{ width: 0.625rem; height: 0.625rem; border-radius:50%; border:none; background: rgba(255,255,255,.35); cursor:pointer; }
       .dot.active{ background: #fff; }
     }
   }
 
   .right{
-    h2{ margin: 6rem 0 0.75rem; font-size: clamp(2.2rem, 2.4vw, 1.75rem); text-align: center;} /* 4px 0 12px; 20~28px */
+    h2{
+      margin: 6rem 0 0.75rem;
+      font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+      text-align: center; /* 제목 가운데 */
+    }
 
+    /* ===== 예약 표 컨테이너 ===== */
     .table{
-      background: #222; border-radius: 0.75rem; /* 12px */
-      overflow: hidden; border: 0.125rem solid rgba(255,255,255,.1); /* 2px */
-      .thead, .row{
-        display: grid; grid-template-columns: 1.2fr 1fr .8fr .6fr; align-items:center; justify-items: center;
-      }
+      /* 행 개수/높이 변수 */
+       max-height: calc(var(--header-h) + var(--row-h) * 8);
+       overflow-y: auto;
+
+      /* 컨테이너: 헤더(고정) + 본문(스크롤) 2행 grid */
+      display: grid;
+      grid-template-rows: auto 1fr;
+
+      background: #222;
+      border-radius: 0.75rem;            /* 12px */
+      border: 0.125rem solid rgba(255,255,255,.1); /* 2px */
+
+      /* 헤더 */
       .thead{
-        background: $primary-color; color: #fff; font-weight: 800;
-        span{ padding: 0.75rem 0.875rem; } /* 12px 14px */
+        display: grid;
+        grid-template-columns: 1.2fr 1fr .8fr .6fr; /* Date / Time / Reservation / Book */
+        align-items: center;
+        justify-items: center;
+        background: $primary-color;
+        color: #fff;
+        font-weight: 800;
+        span{ padding: 0.75rem 0.875rem; text-align:center; }
       }
-      .tbody .row{
-        border-top: 0.0625rem solid rgba(255,255,255,.08); /* 1px */
-        span{ padding: 0.75rem 0.875rem; color: rgba(255,255,255,.9); } /* 12px 14px */
+
+      /* 본문(스크롤 영역) */
+      .tbody{
+        max-height: calc(var(--row-h) * 8);   /* 8행만 보이기 */
+        overflow-y: auto;
+        overflow-x: hidden;
+        /* 스크롤바가 생겨도 헤더와 열 정렬 어긋남 줄이기 */
+        scrollbar-gutter: stable both-edges;
+
+        .row{
+          min-height: var(--row-h);
+          display: grid;
+          grid-template-columns: 1.2fr 1fr .8fr .6fr; /* 헤더와 동일 */
+          align-items: center;
+          justify-items: center; /* ✅ 가운데 정렬 */
+          border-top: 0.0625rem solid rgba(255,255,255,.08); /* 1px */
+          span{ padding: 0.75rem 0.875rem; color: rgba(255,255,255,.9); }
+        }
       }
+
+      /* 예약 가능/불가 pill */
       .pill{
         min-width: 2.75rem; /* 44px */
         padding: 0.375rem 0; /* 6px 0 */
@@ -361,6 +429,7 @@ $background-color: #333333;
     }
   }
 }
+
 
 /* 상단 컨트롤 바 */
 .booking .book-controls{
