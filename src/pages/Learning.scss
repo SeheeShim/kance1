@@ -192,7 +192,7 @@ $background-color: #333333;
     margin-top: 5rem;
     margin-bottom: 5rem;
     display: grid; gap: 1.125rem;
-    grid-template-columns: minmax(45rem, 56rem) 14rem; /* 유튜브 TV 폭 조절 */
+    grid-template-columns: minmax(50rem, 55rem) 11.52rem; /* 유튜브 TV 폭 조절 */
     @media (max-width: 960px){ grid-template-columns: 1fr; }
   }
 
@@ -414,7 +414,9 @@ $background-color: #333333;
           align-items: center;
           justify-items: center; /* ✅ 가운데 정렬 */
           border-top: 0.0625rem solid rgba(255,255,255,.08); /* 1px */
-          span{ padding: 0.75rem 0.875rem; color: rgba(255,255,255,.9); }
+          span{padding: 0.75rem 0.875rem; color: rgba(255,255,255,.9); }
+          span:first-child{padding-left: 0; }
+          span:last-child{padding-right: 0; }
         }
       }
 

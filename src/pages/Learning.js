@@ -61,21 +61,22 @@ const TUTORS = [
     ],
     // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
-      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
-      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 3 },
-      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
-      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 2 },
-      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 5 },
-      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 1 },
-      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
-      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-21", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-27", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-27", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-28", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-28", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
     ],
     howto: {
       basic: "TZA5ajIjxFk",   
@@ -131,21 +132,22 @@ const TUTORS = [
     ],
     // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
-      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
-      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 5 },
-      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
-      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
-      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
-      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 4 },
-      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
-      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-20", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-21", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-21", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-21", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-22", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-23", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-23", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-23", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-24", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-27", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
     ],
     howto: {
       basic: "TZA5ajIjxFk",   
@@ -198,21 +200,21 @@ const TUTORS = [
     ],
     // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 9 },
-      { date: "2025-09-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 7 },
-      { date: "2025-09-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
-      { date: "2025-09-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
-      { date: "2025-09-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
-      { date: "2025-09-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 3 },
-      { date: "2025-09-25", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 6 },
-      { date: "2025-09-25", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 2 },
-      { date: "2025-09-26", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 8 },
-      { date: "2025-09-26", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-20", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-20", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-21", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-21", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-22", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
     ],
     howto: {
       basic: "TZA5ajIjxFk",   
@@ -225,97 +227,386 @@ const TUTORS = [
     id: "gabee",
     name: "가비",
     profile: "/img/Tutor/Tutor4.jpg",
-    studioPhotos: ["/img/studio/gabee_1.jpg"],
-    choreos: [
-      { title: "Rollin'", youtubeId: "1dN3rP2qL6o" },
+    summary: "라치카의 리더, 스우파1 출연",
+    career: [
+      "댄스 시작 : 2012",
+      "줌마미아 (?)",
+      "LACHICA (2021년~현재)",
     ],
+    bio: ['K-POP 안무가/디렉터.',
+          '스타일 : Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2020, title: "가온차트 뮤직 어워드 올해의 스타일상 커리어그라피부문", result: "수상" },
+      { year: 2024, title: " 코레오 어워드 올해의 안무", result: "대상" },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "Main Studio",
+      address: "어반플레이에서  주로 팝업으로 수업, 글로벌 클래스·프로젝트",
+    },
+    studioPhotos: [
+      "/img/studio/tutor1_studio1.jpg",
+      "/img/studio/tutor1_studio2.jpg",
+      "/img/studio/tutor1_studio3.jpg"
+    ],
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "Why Don't You Know", youtubeId: "w3nML8P6kQQ" },
+      { title: "벌써 12시", youtubeId: "x3uq6dadmwE" },
+      { title: "Snapping", youtubeId: "Yn-2NjjvgQA" },
+      { title: "Whiplash", youtubeId: "P-GVYVQo8WM" },
+      { title: "LOVE DIVE", youtubeId: "u1gMMUBbz6U" },
+      { title: "Baddie", youtubeId: "0cluwqvBYZ0" },
+      { title: "XOXZ", youtubeId: "zLqjsn9bGMY" },
+      { title: "BEAUTIFUL MONSTER", youtubeId: "JhqPXinV5e4" },
+      { title: "Talk that Talk", youtubeId: "vsky4lvJhrI" },
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-20", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-21", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-21", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-22", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-24", time: "18:00 - 19:00", location: "Main Studio", cap: 10, reserved: 5 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "2yepkSVeVsM"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
   { 
     id: "bailey",
     name: "Bailey",
     profile: "/img/Tutor/Tutor5.jpg",
-    studioPhotos: ["/img/studio/bailey_1.jpg"],
-    choreos: [
-      { title: "Positions", youtubeId: "tcYodQoapMg" },
+    summary: "ALLDAY PROJECT 데뷔",
+    career: [
+      "댄스 시작 : 2010",
+      "Molly’s Monsters (2010년~2014년)",
+      "Buns and Roses (2014년~2017년)",
+      "S-Rank (2017년~2021년)",
+      "Kinjaz (2019년~2021년)",
     ],
+    bio: ['K-POP 안무가',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2017, title: "인더스트리 댄스 어워즈(Industry Dance Awards)", result: "수상 후보" },
+      { year: 2019, title: "아레나 어워즈(Arena Awards) 올해의 라이징 스타상", result: "수상" },
+      { year: 2022, title: "월드 코레오그래피 어워즈(World Choreography Awards)", result: "수상 후보" },
+      { year: 2023, title: " 애드위크 크리에이터 비저너리 어워즈(Adweek Creator Visionary Awards)", result: "올해의 댄스 크리에이터상"},
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "어반플레이에서 주로 팝업으로 수업",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "POP/STARS", youtubeId: "qaAkvzLSg0s" },
+      { title: "Don’t Call ME", youtubeId: "5surghPNB-U" },
+      { title: "Savage", youtubeId: "HLHI-sohQiw" },
+      { title: "도깨비불", youtubeId: "KULMLgLPzfU" },
+      { title: "MEOW", youtubeId: "flKJOVxYilw" },
+      { title: "BODY", youtubeId: "QEk6w_Bk1Po" },
+      { title: "FAMOUS", youtubeId: "r62I7NOKcPo" },
+      { title: "WICKED", youtubeId: "m-nBEYbfDVE" },
+      { title: "금금금", youtubeId: "_as6xpzKUTg" },
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-20", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-20", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-21", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-21", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-22", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-24", time: "18:00 - 19:00", location: "Main Studio", cap: 10, reserved: 4 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
   { 
     id: "mina",
     name: "미나명",
     profile: "/img/Tutor/Tutor6.jpg",
-    studioPhotos: ["/img/studio/mina_1.jpg"],
-    choreos: [
-      { title: "Dance The Night", youtubeId: "OiC1rgCPmUQ" },
+    summary: "스우파2 출연",
+    career: [
+      "댄스 시작 : 2012",
     ],
+    bio: ['K-POP 안무가',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2023, title: "스트릿 우먼 파이터", result: "출연 " },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "MU:TUDIO(서울 광진구 아차산로 192 2F). 클래스·공연 운영.",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "ALL I WANNA DO", youtubeId: "2_P0mqhSrJ0"},
+      { title: "GUCCI", youtubeId: "J28TxI45QDs"},
+      { title: "고고베베", youtubeId: "exppHlhjp9k"},
+      { title: "Psycho", youtubeId: "kjb5LNA0_-Y"},
+      { title: "Sweet But Psycho", youtubeId: "yz5hrlhbaYI"},
+      { title: "7 Rings", youtubeId: "WfwV8vkIXvI"},
+      { title: "Bad Guy", youtubeId: "kyKQ1_1IVlw"},
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-22", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-22", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-23", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-23", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-24", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-24", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-24", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-27", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-27", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-28", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
   { 
     id: "bada",
     name: "이바다",
     profile: "/img/Tutor/Tutor7.jpg",
-    studioPhotos: ["/img/studio/bada_1.jpg"],
-    choreos: [
-      { title: "Vibe", youtubeId: "Nn_TG2pF8PM" },
+    summary: "베베의 리더",
+    career: [
+      "댄스 시작 : 2015",
+      "CupCakes (2015년~2017년)",
+      "URBANPLAY 댄스학원 전속 강사 (2017~2023년)",
+      "저스트 절크 아카데미 합정점 전속 강사 (2018~2023년)",
+      "BEBE (2022년 7월 3일~ )",
     ],
+    bio: ['K-POP 안무가',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2023, title: "MAMA AWARDS 비비고 Culture & Style", result: "수상" },
+      { year: 2024, title: "피드백 코리아 댄스 어워드", result: " 베스트 댄스 챌린지상" },
+      { year: 2024, title: "피드백 코리아 댄스 어워드", result: "올해의 아이코닉상" },
+      { year: 2024, title: "유니버셜 슈퍼스타 어워즈 유니버설 퍼포먼스 아이콘", result: "수상" },
+      { year: 2022, title: "MAMA AWARDS 베스트 코레오그래피", result: "수상" },
+      { year: 2023, title: "코레오 어워드", result: " 올해의 베스트 댄스 스타상"},
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "서울특별시 강남구 학동로 67길 12 (청담동), 서울 기반, 글로벌 투어·워크숍",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "Next Level", youtubeId: "fANRvlCTmy4" },
+      { title: "도깨비불", youtubeId: "vJFeoVNu3Vo" },
+      { title: "Savage", youtubeId: "BivJx4NhfrA" },
+      { title: "Girls", youtubeId: "gE6IlN8ok40" },
+      { title: "Dirty Work", youtubeId: "cuSr1vG-Ve4" },
+      { title: "Accendio", youtubeId: "uKc6huEmqyM" },
+      { title: "SHEESH", youtubeId: "CRZxL4faIP0" },
+      { title: "Smoke", youtubeId: "iuIzniSa1Hs" },
+      { title: "Guilty", youtubeId: "Krp_3wlm9dM" },
+      { title: "Rover", youtubeId: "zq4i1lPhYFU" },
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-21", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-21", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-22", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-23", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-23", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-23", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-24", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-27", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
   { 
     id: "byj",
     name: "배윤정",
     profile: "/img/Tutor/Tutor8.jpg",
-    studioPhotos: ["/img/studio/byj.jpg"],
-    choreos: [
-      { title: "Positions", youtubeId: "" },
+    summary: "안무팀 야마앤핫칙스, REDSTAGE의 공동 대표",
+    career: [
+      "댄스 시작 : 2000년대 초반",
     ],
+    bio: ['K-POP 안무가',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2014, title: "가온어워드", result: "스타일 안무상" },
+      { year: 2015, title: "대한민국 대중문화예술상 문화체육부장관", result: "표창" },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "서울 마포구 월드컵로 134 6층 1호",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "STEP", youtubeId: "8knzQv4ln1M" },
+      { title: "맘마미아", youtubeId: "zXQvssll_I4" },
+      { title: "Abracadabra", youtubeId: "gKZ2BsYK3VM" },
+      { title: "Sixth Sense", youtubeId: "6iuAuiG4sNU" },
+      { title: "Bo Peep Bo Peep", youtubeId: "zjBPx4cgWXU" },
+      { title: "Roly-Poly", youtubeId: "tTd9Gna50ls" },
+      { title: "Lovey-Dovey", youtubeId: "g3uIdA2IiKw" },
+      { title: "기대해", youtubeId: "12fHiKDErtk" },
+      { title: "Something", youtubeId: "zVO5xTAbxm8" },
+      { title: "위아래", youtubeId: "uZpImbgILs4" },
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-21", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-21", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-22", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-22", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-23", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-23", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-23", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-24", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-27", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
   { 
     id: "bgy",
     name: "백구영",
     profile: "/img/Tutor/Tutor9.jpg",
-    studioPhotos: ["/img/studio/bgy.jpg"],
-    choreos: [
-      { title: "Positions", youtubeId: "" },
+    summary: "1MILLION 이사",
+    career: [
+      "댄스 시작 : 2000년대 초반",
+      "SM엔터테인먼트 트레이너, 전속 퍼포먼스 디렉터",
+      "TAPAHA 원장 (2019년~)",
+      "1MILLION DANCE STUDIO 이사 (2022년~)",
     ],
+    bio: ['K-POP 안무가',
+          '스타일: Urban/Choreography.',
+    ],
+    // --- 경력/수상: UI에서 목록으로 뿌리기 쉬운 배열 형태 권장 ---
+    awards: [
+      { year: 2014, title: "가온어워드", result: "스타일 안무상" },
+      { year: 2015, title: "대한민국 대중문화예술상 문화체육부장관", result: "표창" },
+    ],
+
+    // --- 스튜디오/사진/슬라이드 ---
+    studio: {
+      name: "1MILLION Dance Studio 서울특별시 성동구 뚝섬로13길 33",
+      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+    },
+
+    // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
+    choreos: [
+      { title: "Ko Ko Bop", youtubeId: "daJQKUGbBSM" },
+      { title: "Love Shot", youtubeId: "2tJZQa27dFs" },
+      { title: "Dancing King", youtubeId: "4EiNsoTc9kk" },
+      { title: "Hey Mama", youtubeId: "h_kVb43nDIw" },
+      { title: "난 빛나", youtubeId: "ZNPWpC5Sg3E" },
+      { title: "The Stealer", youtubeId: "CqeC9jcGfaY" },
+      { title: "Mantra", youtubeId: "-rt974J9mTo" },
+    ],
+    // --- 예약 시간표 ---
     timetable: [
-      { date: "2025-09-16", time: "13:00 - 15:00", reserved: 8, cap: 10 },
-      { date: "2025-09-16", time: "16:00 - 18:00", reserved: 10, cap: 10 },
-      { date: "2025-09-19", time: "12:00 - 14:00", reserved: 6, cap: 10 },
-      { date: "2025-09-19", time: "15:00 - 17:00", reserved: 5, cap: 10 },
-      { date: "2025-09-20", time: "12:00 - 14:30", reserved: 10, cap: 10 },
-    ]
+      { date: "2025-10-16", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-16", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 8 },
+      { date: "2025-10-17", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 9 },
+      { date: "2025-10-17", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-20", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-21", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 10 },
+      { date: "2025-10-21", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-22", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 5 },
+      { date: "2025-10-22", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 2 },
+      { date: "2025-10-23", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+      { date: "2025-10-23", time: "13:00 - 15:00", location: "Main Studio", cap: 10, reserved: 1 },
+      { date: "2025-10-23", time: "16:00 - 18:00", location: "Main Studio", cap: 10, reserved: 4 },
+      { date: "2025-10-24", time: "12:00 - 14:00", location: "Main Studio", cap: 10, reserved: 6 },
+      { date: "2025-10-24", time: "15:00 - 17:00", location: "Main Studio", cap: 10, reserved: 7 },
+      { date: "2025-10-27", time: "12:00 - 14:30", location: "Main Studio", cap: 10, reserved: 3 },
+    ],
+    howto: {
+      basic: "TZA5ajIjxFk",   
+      kpop:  "7ac65YiC7zY"    
+    },
+    // 필요 시 태그/장르 등
+    tags: ["K-pop", "Urban", "Choreo"]
   },
 ];
 
