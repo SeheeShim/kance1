@@ -45,7 +45,7 @@ const TUTORS = [
     studioPhotos: [
       "/img/studio/tutor1_studio1.jpg",
       "/img/studio/tutor1_studio2.jpg",
-      "/img/studio/tutor1_studio3.jpg"
+      "/img/studio/tutor1_studio3.jpg",
     ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
@@ -116,8 +116,12 @@ const TUTORS = [
     studio: {
       name: "어반플레이에서  주로 팝업으로 수업",
       /* address: "서울특별시 성동구 뚝섬로13길 33", */
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
     },
+    studioPhotos: [
+      "/img/studio/tutor2_studio1.jpg",
+      "/img/studio/tutor2_studio2.jpg",
+      "/img/studio/tutor2_studio3.jpg",
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -184,8 +188,12 @@ const TUTORS = [
     studio: {
       name: "Main Studio",
       address: "서울특별시 성동구 뚝섬로13길 33",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
     },
+    studioPhotos: [
+      "/img/studio/tutor3_studio1.jpg",
+      "/img/studio/tutor3_studio2.jpg",
+      "/img/studio/tutor3_studio3.jpg",
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -245,12 +253,12 @@ const TUTORS = [
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
       name: "Main Studio",
-      address: "어반플레이에서  주로 팝업으로 수업, 글로벌 클래스·프로젝트",
+      address: "어반플레이에서 주로 팝업으로 수업, 글로벌 클래스·프로젝트",
     },
     studioPhotos: [
-      "/img/studio/tutor1_studio1.jpg",
-      "/img/studio/tutor1_studio2.jpg",
-      "/img/studio/tutor1_studio3.jpg"
+      "/img/studio/tutor4_studio1.jpg",
+      "/img/studio/tutor4_studio2.jpg",
+      "/img/studio/tutor4_studio3.jpg"
     ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
@@ -318,8 +326,12 @@ const TUTORS = [
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
       name: "어반플레이에서 주로 팝업으로 수업",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
     },
+    studioPhotos: [
+      "/img/studio/tutor5_studio1.jpg",
+      "/img/studio/tutor5_studio2.jpg",
+      "/img/studio/tutor5_studio3.jpg"
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -378,9 +390,14 @@ const TUTORS = [
 
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
-      name: "MU:TUDIO(서울 광진구 아차산로 192 2F). 클래스·공연 운영.",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+      name: "MU:TUDIO",
+      address: "서울 광진구 아차산로 192 2F, 클래스·공연 운영."
     },
+    studioPhotos: [
+      "/img/studio/tutor6_studio1.jpg",
+      "/img/studio/tutor6_studio2.jpg",
+      "/img/studio/tutor6_studio3.jpg"
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -419,7 +436,7 @@ const TUTORS = [
   },
   { 
     id: "bada",
-    name: "이바다",
+    name: "바다리",
     profile: "/img/Tutor/Tutor7.jpg",
     summary: "베베의 리더",
     career: [
@@ -444,9 +461,14 @@ const TUTORS = [
 
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
-      name: "서울특별시 강남구 학동로 67길 12 (청담동), 서울 기반, 글로벌 투어·워크숍",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+      address: "서울특별시 강남구 학동로 67길 12 (청담동), 서울 기반, 글로벌 투어·워크숍",
     },
+    studioPhotos: [
+      "/img/studio/tutor7_studio1.jpg",
+      "/img/studio/tutor7_studio2.jpg",
+      "/img/studio/tutor7_studio3.jpg",
+      "/img/studio/tutor7_studio4.jpg",
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -505,9 +527,14 @@ const TUTORS = [
 
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
-      name: "서울 마포구 월드컵로 134 6층 1호",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+      address: "서울 마포구 월드컵로 134 6층 1호",
     },
+    studioPhotos: [
+      "/img/studio/tutor8_studio1.jpg",
+      "/img/studio/tutor8_studio2.jpg",
+      "/img/studio/tutor8_studio3.jpg",
+      "/img/studio/tutor8_studio4.jpg",
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
@@ -569,9 +596,13 @@ const TUTORS = [
 
     // --- 스튜디오/사진/슬라이드 ---
     studio: {
-      name: "1MILLION Dance Studio 서울특별시 성동구 뚝섬로13길 33",
-      photos: ["/img/studio/lia_1.jpg", "/img/studio/lia_2.jpg", "/img/studio/lia_3.jpg"]
+      address: "1MILLION Dance Studio 서울특별시 성동구 뚝섬로13길 33",
     },
+    studioPhotos: [
+      "/img/studio/tutor9_studio1.jpg",
+      "/img/studio/tutor9_studio2.jpg",
+      "/img/studio/tutor9_studio3.jpg",
+    ],
 
     // --- 안무 리스트(오른쪽 버튼 + TV 연동) ---
     choreos: [
